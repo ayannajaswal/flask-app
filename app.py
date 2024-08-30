@@ -6,17 +6,17 @@ app = Flask(__name__)
 # Define a route to serve the index.html file
 @app.route('/')
 def serve_index():
-    return send_from_directory('.', 'index.html')
+    return send_from_directory('index.html', 'index.html')
 
 # Define a route to serve the CSS file
 @app.route('/style.css')
 def serve_css():
-    return send_from_directory('.', 'style.css')
+    return send_from_directory('styles.css', 'style.css')
 
 # Define a route to serve the JavaScript file
 @app.route('/script.js')
 def serve_js():
-    return send_from_directory('.', 'script.js')
+    return send_from_directory('script.js', 'script.js')
 
 # Define a route for handling messages
 @app.route('/messages', methods=['GET', 'POST'])
