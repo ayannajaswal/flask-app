@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 
-app = Flask(__name__)
+app = Flask(__name__,
+            template_folder='C:\Users\Ayanna\app\app\template',
+            style_folder='C:\Users\Ayanna\app\app\style')
 
 # In-memory storage for messages
 messages = {}
